@@ -82,7 +82,7 @@ The following line will initiate tests for the given module only. In order to pa
 
 ::
 
-  (cd "$ESHOP_PATH" && PARTIAL_MODULE_PATHS="$MODULE_NAME" ADDITIONAL_TEST_PATHS='' RUN_TESTS_FOR_SHOP=0 RUN_TESTS_FOR_MODULES=1 ACTIVATE_ALL_MODULES=1 vendor/bin/runtests)
+  (cd "$ESHOP_PATH" && MODULE_IDS="$MODULE_NAME" ADDITIONAL_TEST_PATHS='' RUN_TESTS_FOR_SHOP=0 RUN_TESTS_FOR_MODULES=1 ACTIVATE_ALL_MODULES=1 vendor/bin/runtests)
 
 
 Generate code coverage
@@ -92,7 +92,7 @@ The line below will initiate execution of tests and generation of code coverage 
 
 ::
 
-  (cd "$ESHOP_PATH" && PARTIAL_MODULE_PATHS="$MODULE_NAME" ADDITIONAL_TEST_PATHS='' RUN_TESTS_FOR_SHOP=0 RUN_TESTS_FOR_MODULES=1 ACTIVATE_ALL_MODULES=1 vendor/bin/runtests --coverage-html="$ESHOP_PATH/coverage_report/$MODULE_NAME" AllTestsUnit)
+  (cd "$ESHOP_PATH" && MODULE_IDS="$MODULE_NAME" ADDITIONAL_TEST_PATHS='' RUN_TESTS_FOR_SHOP=0 RUN_TESTS_FOR_MODULES=1 ACTIVATE_ALL_MODULES=1 vendor/bin/runtests --coverage-html="$ESHOP_PATH/coverage_report/$MODULE_NAME" AllTestsUnit)
 
 2. Convert all files to UTF-8
 -----------------------------
